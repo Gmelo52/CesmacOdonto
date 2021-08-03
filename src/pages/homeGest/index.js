@@ -24,7 +24,7 @@ const HomeGest = ({ navigation }) => {
         </View>
         <View style={styles.viewBtns}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("mitosGest")}>
               <View style={styles.btn}>
                 <ImageBackground
                   source={require("../../assets/bgBtn.png")}
@@ -42,7 +42,7 @@ const HomeGest = ({ navigation }) => {
                 </ImageBackground>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("medGest")}>
               <View style={styles.btn}>
                 <ImageBackground
                   source={require("../../assets/bgBtn.png")}
@@ -60,7 +60,7 @@ const HomeGest = ({ navigation }) => {
                 </ImageBackground>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("pnoGest")}>
               <View style={styles.btn}>
                 <ImageBackground
                   source={require("../../assets/bgBtn.png")}
@@ -78,7 +78,7 @@ const HomeGest = ({ navigation }) => {
                 </ImageBackground>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("altGest")}>
               <View style={styles.btn}>
                 <ImageBackground
                   source={require("../../assets/bgBtn.png")}

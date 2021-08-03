@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     contVideo:{
         width: '100%',
         height: '40%',
-        backgroundColor:"red",
     },
     imgVideo:{
         width:'100%',
