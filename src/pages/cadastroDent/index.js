@@ -33,7 +33,7 @@ const CadDent = ({ navigation }) => {
               marginLeft: 20,
             }}
           >
-            Dentista
+            Profissional
           </Text>
           <View style={styles.boxInput}>
             <Text style={{ color: "#79BD9A" }}>Nome Completo:</Text>

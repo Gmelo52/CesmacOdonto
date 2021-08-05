@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     title:{
         color: "#fff",
         fontWeight:"bold",
-        fontSize:30,
+        fontSize:27,
         marginLeft:30,
     },
     descTitle:{
@@ -29,11 +29,11 @@ const styles = StyleSheet.create({
         marginLeft:30,
     },
     icon:{
+        position: 'absolute',
         width: 80,
         height: 80,
         alignSelf:'center',
         right: 30,
-        top:10
       },
     contDesc:{
         marginTop:-25,

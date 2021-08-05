@@ -13,6 +13,10 @@ import MitosGest from "./src/pages/mitosGest"
 import MedGest from "./src/pages/medGest"
 import PnoGest from "./src/pages/pnoGest"
 import AltGest from "./src/pages/altGest"
+import Inicio from "./src/pages/inicio"
+import LoginDent from "./src/pages/loginDent";
+import HomeDent from "./src/pages/homeDent";
+import PnoDent from "./src/pages/pnoDent";
 
 const Stack = createStackNavigator();
 
@@ -31,6 +35,11 @@ export default function App({ navigation }) {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="loginDent"
+          component={LoginDent}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="cadGest"
           component={CadGest}
           options={{ headerShown: false }}
@@ -43,6 +52,11 @@ export default function App({ navigation }) {
         <Stack.Screen
           name="homeGest"
           component={HomeGest}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="homeDent"
+          component={HomeDent}
           options={{ headerShown: false }}
         />
         <Stack.Screen
@@ -68,6 +82,16 @@ export default function App({ navigation }) {
         <Stack.Screen
           name="altGest"
           component={AltGest}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="inicio"
+          component={Inicio}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="pnoDent"
+          component={PnoDent}
           options={{ headerShown: false }}
         />
 

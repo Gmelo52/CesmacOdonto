@@ -1,15 +1,13 @@
 //import liraries
-import React, { Component } from "react";
+import React from "react";
 import {
-  View,
-  Text,
-  StyleSheet,
-  ImageBackground,
   Image,
-  TextInput,
+  ImageBackground,
   KeyboardAvoidingView,
+  Text,
+  TextInput,
   TouchableOpacity,
-  ScrollView,
+  View,
 } from "react-native";
 import styles from "./styles";
 
@@ -22,12 +20,6 @@ const Login = ({ navigation }) => {
         source={require("../../assets/inicioBG.png")}
         style={styles.background}
       >
-        <View style={styles.boxLogo}>
-          <Image
-            source={require("../../assets/LogoGest.png")}
-            style={styles.imgLogo}
-          />
-        </View>
         <View style={styles.boxLogin}>
           <Text
             style={{
@@ -72,29 +64,20 @@ const Login = ({ navigation }) => {
                 />
               </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.btnLogin} onPress={() =>navigation.navigate("homeGest")}>
-                <Text style={{ fontSize: 24, color: "#0B486B" }}>Login</Text>
+            <TouchableOpacity
+              style={styles.btnLogin}
+              onPress={() => navigation.navigate("homeGest")}
+            >
+              <Text style={{ fontSize: 24, color: "#0B486B" }}>Login</Text>
             </TouchableOpacity>
           </View>
         </View>
         <View style={styles.boxCadastro}>
           <View style={styles.textCad}>
+            <TouchableOpacity onPress={() => navigation.navigate("cadGest")}>
             <Text style={{ fontSize: 20, fontWeight: "500", color: "#0B486B" }}>
               Cadastre-se
             </Text>
-          </View>
-          <View style={styles.contBtn}>
-            <TouchableOpacity
-              style={styles.btnGestante}
-              onPress={() => navigation.navigate("cadGest")}
-            >
-              <Text style={{ fontSize: 24, color: "#fff" }}>Gestante</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.btnDentista}
-              onPress={() => navigation.navigate("cadDent")}
-            >
-              <Text style={{ fontSize: 24, color: "#fff" }}>Dentista</Text>
             </TouchableOpacity>
           </View>
         </View>

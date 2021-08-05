@@ -4,19 +4,9 @@ const styles = StyleSheet.create({
     background:{
         width:'100%',
         height:'100%',
-    },
-    boxLogo:{
-        flex:.4,
         justifyContent: 'flex-end',
-        alignItems:"center"
-    },
-    imgLogo:{
-        width:170,
-        height:150,
     },
     boxLogin:{
-        flex:.45,
-        justifyContent:"flex-end",
         paddingBottom:20
     },
     boxInput:{
@@ -47,6 +37,7 @@ const styles = StyleSheet.create({
         marginHorizontal:5,
     },
     btnLogin:{
+        backgroundColor:"#fff",
         justifyContent: 'center',
         alignItems:"center",
         borderWidth:1,
