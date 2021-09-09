@@ -9,6 +9,7 @@ import CadGest from "./src/pages/cadastroGest";
 import CadDent from "./src/pages/cadastroDent";
 import HomeGest from "./src/pages/homeGest";
 import Video from "./src/pages/videoPage"
+import VideoDent from './src/pages/videoDent'
 import MitosGest from "./src/pages/mitosGest"
 import MedGest from "./src/pages/medGest"
 import PnoGest from "./src/pages/pnoGest"
@@ -17,6 +18,8 @@ import Inicio from "./src/pages/inicio"
 import LoginDent from "./src/pages/loginDent";
 import HomeDent from "./src/pages/homeDent";
 import PnoDent from "./src/pages/pnoDent";
+import AtenDent from "./src/pages/atenDent";
+import MedDent from "./src/pages/medDent";
 
 const Stack = createStackNavigator();
 
@@ -65,6 +68,11 @@ export default function App({ navigation }) {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="videoDent"
+          component={VideoDent}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="mitosGest"
           component={MitosGest}
           options={{ headerShown: false }}
@@ -92,6 +100,16 @@ export default function App({ navigation }) {
         <Stack.Screen
           name="pnoDent"
           component={PnoDent}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="atenDent"
+          component={AtenDent}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="medDent"
+          component={MedDent}
           options={{ headerShown: false }}
         />
 

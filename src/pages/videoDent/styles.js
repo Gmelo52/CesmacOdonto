@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
     textTitle:{
         fontWeight:"bold",
         fontSize:20,
-        color: "#0B486B",
+        color: "#3B8686",
         marginVertical:10,
     },
     textDesc:{
         fontWeight:"500",
         fontSize:12,
-        color: "#0B486B",
+        color: "#3B8686",
         textAlign:'justify',
     },
 })

@@ -4,7 +4,7 @@ import { View, Text, Image } from "react-native";
 import styles from "./styles";
 import { WebView } from "react-native-webview";
 
-const Video = () => {
+const VideoDent = () => {
   return (
     <View style={styles.container}>
       <View style={styles.contVideo}>
@@ -16,7 +16,7 @@ const Video = () => {
           style={{ flex: 1 }}
           javaScriptEnabled={true}
           source={{
-            uri: `https://www.youtube.com/embed/V1O3pdIINsY`,
+            uri: `https://www.youtube.com/embed/AofOpJsghfc`,
           }}
         />
       </View>
@@ -44,14 +44,6 @@ const Video = () => {
     </View>
   );
 };
-export default Video;
+export default VideoDent;
 
-<iframe
-  width="1904"
-  height="832"
-  src="https://www.youtube.com/embed/V1O3pdIINsY"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>;
+<iframe width="1904" height="832" src="https://www.youtube.com/embed/AofOpJsghfc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

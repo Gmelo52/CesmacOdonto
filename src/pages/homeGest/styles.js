@@ -45,6 +45,10 @@ const styles = StyleSheet.create({
     marginRight:5,
     justifyContent: 'center',
     alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
   },
   imgBtn:{
       width: '100%',
@@ -73,6 +77,10 @@ const styles = StyleSheet.create({
     height: 90,
     justifyContent: 'center',
     alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
   },
   viewBtnVideo:{
     /* backgroundColor:"blue", */
@@ -81,6 +89,7 @@ const styles = StyleSheet.create({
     alignItems: "center", 
     width: '100%',
     height: '100%'
+    
   },
 });
 export default styles;
