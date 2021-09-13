@@ -51,7 +51,7 @@ const HomeDent = ({ navigation }) => {
           <Icon
             name="logout"
             size={20}
-            style={{ marginRight: 35, color: "#0B486B" }}
+            style={{ marginRight: 35, color: "#3B8686" }}
           />
         </TouchableOpacity>
         <Image

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 import LottieView from "lottie-react-native";
-import segonha from "../../assets/segonha.json";
+import segonha from "../../assets/segonha2.json";
 
 export default function LoadSeg() {
   return (
@@ -18,7 +18,7 @@ export default function LoadSeg() {
         <LottieView
         style={{width:200, height:200}}
           resizeMode="contain"
-          source={require("../../assets/segonha.json")}
+          source={segonha}
           autoPlay
           loop
         />
