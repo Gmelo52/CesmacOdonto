@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
         flex:.20,
     },
     textCad:{
-        flex:.35,
-        marginHorizontal:25,
-        alignItems:"flex-start",
-        justifyContent: "center",
+        flex:.8,
+        marginHorizontal:20,
+        alignItems:"flex-end",
+        justifyContent: "space-evenly",
     },
     contBtn:{
         flex:.65,

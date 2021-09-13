@@ -1,5 +1,5 @@
 //import liraries
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import {
   View,
   Text,
@@ -11,8 +11,32 @@ import {
   ScrollView,
 } from "react-native";
 import styles from "./styles";
+import firebase from "../../config/firebase";
+import 'firebase/firestore';
 
 const CadDent = ({ navigation }) => {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [nome, setNome] = useState("");
+  const [cro, setCro] = useState("");
+  const [msg, setmsg] = useState('')
+  const db = firebase.firestore();
+
+  async function cadastro() {
+    try {
+      let usuarioCad = await firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, senha);
+      await db.collection("usuarios").doc(usuarioCad.user.uid).set({
+        nome: nome,
+        email: email,
+        cro: cro,
+        tipo: "dent",
+      });
+    }catch (erro) {
+      setmsg('Verifique os campos digitados')
+    }
+  }
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "position" : "height"}
@@ -32,8 +56,13 @@ const CadDent = ({ navigation }) => {
               color: "#79BD9A",
               marginLeft: 20,
             }}
-          >
+          > 
             Profissional
+          </Text>
+          <Text
+            style={{ color: "red", alignSelf: "center", fontWeight: "500" }}
+          >
+            {msg}
           </Text>
           <View style={styles.boxInput}>
             <Text style={{ color: "#79BD9A" }}>Nome Completo:</Text>
@@ -41,6 +70,9 @@ const CadDent = ({ navigation }) => {
               style={styles.input}
               placeholder="Nome"
               placeholderTextColor="#747474"
+              onChangeText={(nome) => {
+                setNome(nome);
+              }}
             />
           </View>
           <View style={styles.boxInput}>
@@ -50,6 +82,7 @@ const CadDent = ({ navigation }) => {
               placeholder="CRO"
               keyboardType="numeric"
               placeholderTextColor="#747474"
+              onChangeText={(cro)=>{setCro(cro)}}
             />
           </View>
           <View style={styles.boxInput}>
@@ -59,11 +92,17 @@ const CadDent = ({ navigation }) => {
               placeholder="Email"
               keyboardType="email-address"
               placeholderTextColor="#747474"
+              autoCapitalize='none'
+              onChangeText={(email) => {
+                setEmail(email);
+              }}
             />
           </View>
           <View style={styles.boxInput}>
             <Text style={{ color: "#79BD9A" }}>Senha:</Text>
-            <TextInput style={styles.input} secureTextEntry />
+            <TextInput style={styles.input} secureTextEntry  onChangeText={(senha) => {
+                setSenha(senha);
+              }}/>
           </View>
           <View style={styles.botoesLogin}>
             <View style={styles.social}></View>
@@ -86,7 +125,7 @@ const CadDent = ({ navigation }) => {
                 Login
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btnDentista}>
+            <TouchableOpacity style={styles.btnDentista} onPress={()=>{cadastro()}}>
               <Text style={{ fontSize: 24, color: "#fff" }}>Cadastrar</Text>
             </TouchableOpacity>
           </View>

@@ -1,5 +1,5 @@
 //import liraries
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import {
   View,
   Text,
@@ -9,10 +9,37 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
   ScrollView,
+  ActivityIndicator
 } from "react-native";
 import styles from "./styles";
+import firebase from "../../config/firebase";
+import "firebase/firestore";
 
 const CadGest = ({ navigation }) => {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [nome, setNome] = useState("");
+  const [load, setload] = useState(false);
+  const [msg, setmsg] = useState('')
+  const db = firebase.firestore();
+
+  async function cadastro() {
+    setload(true);
+    try {
+      let usuarioCad = await firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, senha);
+      await db.collection("usuarios").doc(usuarioCad.user.uid).set({
+        nome: nome,
+        email: email,
+        tipo: "gest",
+      });
+    } catch (erro) {
+      setmsg('Verifique os campos digitados')
+    }
+    setload(false);
+  }
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "position" : "height"}
@@ -31,7 +58,12 @@ const CadGest = ({ navigation }) => {
               marginLeft: 20,
             }}
           >
-            Paciente
+            Gestante
+          </Text>
+          <Text
+            style={{ color: "red", alignSelf: "center", fontWeight: "500" }}
+          >
+            {msg}
           </Text>
           <View style={styles.boxInput}>
             <Text style={{ color: "#0B486B" }}>Nome Completo:</Text>
@@ -39,6 +71,9 @@ const CadGest = ({ navigation }) => {
               style={styles.input}
               placeholder="Nome"
               placeholderTextColor="#c4c4c4"
+              onChangeText={(nome) => {
+                setNome(nome);
+              }}
             />
           </View>
           <View style={styles.boxInput}>
@@ -48,11 +83,21 @@ const CadGest = ({ navigation }) => {
               placeholder="Email"
               keyboardType="email-address"
               placeholderTextColor="#c4c4c4"
+              onChangeText={(email) => {
+                setEmail(email);
+              }}
+              autoCapitalize="none"
             />
           </View>
           <View style={styles.boxInput}>
             <Text style={{ color: "#0B486B" }}>Senha:</Text>
-            <TextInput style={styles.input} secureTextEntry />
+            <TextInput
+              style={styles.input}
+              secureTextEntry
+              onChangeText={(senha) => {
+                setSenha(senha);
+              }}
+            />
           </View>
           <View style={styles.botoesLogin}>
             <View style={styles.social}></View>
@@ -73,8 +118,17 @@ const CadGest = ({ navigation }) => {
                 Login
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btnDentista}>
-              <Text style={{ fontSize: 24, color: "#fff" }}>Cadastrar</Text>
+            <TouchableOpacity
+              style={styles.btnDentista}
+              onPress={() => {
+                cadastro();
+              }}
+            >
+              {load == true ? (
+                <ActivityIndicator size={25} color="#fff" />
+              ) : (
+                <Text style={{ fontSize: 24, color: "#fff" }}>Cadastrar</Text>
+              )}
             </TouchableOpacity>
           </View>
         </View>

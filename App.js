@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, TouchableOpacity, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Splash from "./src/pages/splash"
 import Login from "./src/pages/login";
 import CadGest from "./src/pages/cadastroGest";
 import CadDent from "./src/pages/cadastroDent";
@@ -19,23 +18,19 @@ import LoginDent from "./src/pages/loginDent";
 import HomeDent from "./src/pages/homeDent";
 import PnoDent from "./src/pages/pnoDent";
 import AtenDent from "./src/pages/atenDent";
-import MedDent from "./src/pages/medDent";
+import MedDent from "./src/pages/medDent"
+import Splash from "./src/pages/splash";
 
 const Stack = createStackNavigator();
 
 export default function App({ navigation }) {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="splash">
-      <Stack.Screen
-          name="splash"
-          component={Splash}
-          options={{ headerShown: false }}
-        />
+      <Stack.Navigator initialRouteName="login">
         <Stack.Screen
           name="login"
           component={Login}
-          options={{ headerShown: false }}
+          options={{ headerShown: false}}
         />
         <Stack.Screen
           name="loginDent"
@@ -55,12 +50,12 @@ export default function App({ navigation }) {
         <Stack.Screen
           name="homeGest"
           component={HomeGest}
-          options={{ headerShown: false }}
+          options={{ headerShown: false, animationEnabled:false}}
         />
         <Stack.Screen
           name="homeDent"
           component={HomeDent}
-          options={{ headerShown: false }}
+          options={{ headerShown: false, animationEnabled:false }}
         />
         <Stack.Screen
           name="video"

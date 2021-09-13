@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import {
   View,
   Text,
@@ -8,11 +8,53 @@ import {
   ScrollView,
 } from "react-native";
 import styles from "./styles";
+import Icon from "react-native-vector-icons/SimpleLineIcons";
+import firebase from "../../config/firebase";
+import "firebase/firestore";
+import { useEffect } from "react";
 
 const HomeGest = ({ navigation }) => {
+  const [nome, setNome] = useState("");
+  const db = firebase.firestore();
+  async function getNome() {
+    const docUser = await db
+      .collection("usuarios")
+      .doc(firebase.auth().currentUser.uid)
+      .get();
+    const dados = docUser.data();
+    setNome(dados.nome);
+  }
+
+  useEffect(() => {
+    getNome();
+  }, []);
+
+  function logoutFirebase() {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        navigation.navigate("login");
+      })
+      .catch((error) => {
+        alert("Erro, verifique a conexão");
+      });
+  }
   return (
     <View style={styles.container}>
       <View style={styles.boxLogo}>
+        <TouchableOpacity
+          style={{ alignSelf: "flex-end" }}
+          onPress={() => {
+            logoutFirebase();
+          }}
+        >
+          <Icon
+            name="logout"
+            size={20}
+            style={{ marginRight: 35, color: "#0B486B" }}
+          />
+        </TouchableOpacity>
         <Image
           source={require("../../assets/LogoGest.png")}
           style={styles.logo}
@@ -20,7 +62,7 @@ const HomeGest = ({ navigation }) => {
       </View>
       <View style={styles.boxBtn}>
         <View style={styles.viewBoasVindas}>
-          <Text style={styles.text}> Seja bem vindo(a), Guilherme.</Text>
+          <Text style={styles.text}> Seja bem vinda, {nome}.</Text>
         </View>
         <View style={styles.viewBtns}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
