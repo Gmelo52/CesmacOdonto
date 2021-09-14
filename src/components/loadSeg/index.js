@@ -10,13 +10,13 @@ export default function LoadSeg() {
         style={{
           width: "100%",
           height: "100%",
-          backgroundColor: "#0B486B", 
-          justifyContent: 'center',
-          alignItems:'center'
+          backgroundColor: "#0B486B",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <LottieView
-        style={{width:200, height:200}}
+          style={{ width: 200, height: 200 }}
           resizeMode="contain"
           source={segonha}
           autoPlay
