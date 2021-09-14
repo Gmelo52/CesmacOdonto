@@ -9,18 +9,19 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
   ScrollView,
-  ActivityIndicator
+  ActivityIndicator,
 } from "react-native";
 import styles from "./styles";
 import firebase from "../../config/firebase";
 import "firebase/firestore";
+import LoadSeg from "../../components/loadSeg";
 
 const CadGest = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [nome, setNome] = useState("");
   const [load, setload] = useState(false);
-  const [msg, setmsg] = useState('')
+  const [msg, setmsg] = useState("");
   const db = firebase.firestore();
 
   async function cadastro() {
@@ -35,12 +36,14 @@ const CadGest = ({ navigation }) => {
         tipo: "gest",
       });
     } catch (erro) {
-      setmsg('Verifique os campos digitados')
+      setmsg("Verifique os campos digitados");
     }
     setload(false);
   }
 
-  return (
+  return load == true ? (
+    <LoadSeg />
+  ) : (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "position" : "height"}
     >
@@ -124,11 +127,7 @@ const CadGest = ({ navigation }) => {
                 cadastro();
               }}
             >
-              {load == true ? (
-                <ActivityIndicator size={25} color="#fff" />
-              ) : (
-                <Text style={{ fontSize: 24, color: "#fff" }}>Cadastrar</Text>
-              )}
+              <Text style={{ fontSize: 24, color: "#fff" }}>Cadastrar</Text>
             </TouchableOpacity>
           </View>
         </View>

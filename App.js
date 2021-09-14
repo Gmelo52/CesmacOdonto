@@ -19,7 +19,6 @@ import HomeDent from "./src/pages/homeDent";
 import PnoDent from "./src/pages/pnoDent";
 import AtenDent from "./src/pages/atenDent";
 import MedDent from "./src/pages/medDent"
-import Splash from "./src/pages/splash";
 
 const Stack = createStackNavigator();
 

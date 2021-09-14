@@ -18,9 +18,12 @@ const HomeDent = ({ navigation }) => {
   const [nome, setNome] = useState('') 
   const db = firebase.firestore()
   async function getNome() {
-    const docUser = await db.collection('usuarios').doc(firebase.auth().currentUser.uid).get()
-    const dados = docUser.data()
-    setNome(dados.nome)
+    const docUser = await db
+      .collection("usuarios")
+      .doc(firebase.auth().currentUser.uid)
+      .get();
+    const dados = docUser.data();
+    setNome(dados.nome);
   }
 
   useEffect(()=>{

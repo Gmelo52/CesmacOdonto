@@ -12,17 +12,20 @@ import {
 } from "react-native";
 import styles from "./styles";
 import firebase from "../../config/firebase";
-import 'firebase/firestore';
+import "firebase/firestore";
+import LoadSeg from "../../components/loadSeg";
 
 const CadDent = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [nome, setNome] = useState("");
   const [cro, setCro] = useState("");
-  const [msg, setmsg] = useState('')
+  const [msg, setmsg] = useState("");
+  const [load, setload] = useState(false);
   const db = firebase.firestore();
 
   async function cadastro() {
+    setload(true)
     try {
       let usuarioCad = await firebase
         .auth()
@@ -33,11 +36,14 @@ const CadDent = ({ navigation }) => {
         cro: cro,
         tipo: "dent",
       });
-    }catch (erro) {
-      setmsg('Verifique os campos digitados')
+    } catch (erro) {
+      setmsg("Verifique os campos digitados");
     }
+    setload(false)
   }
-  return (
+  return load == true ? (
+    <LoadSeg />
+  ) : (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "position" : "height"}
     >
@@ -45,9 +51,7 @@ const CadDent = ({ navigation }) => {
         source={require("../../assets/DentBG.png")}
         style={styles.background}
       >
-        <View style={styles.boxLogo}>
-          
-        </View>
+        <View style={styles.boxLogo}></View>
         <View style={styles.boxLogin}>
           <Text
             style={{
@@ -56,7 +60,7 @@ const CadDent = ({ navigation }) => {
               color: "#79BD9A",
               marginLeft: 20,
             }}
-          > 
+          >
             Profissional
           </Text>
           <Text
@@ -82,7 +86,9 @@ const CadDent = ({ navigation }) => {
               placeholder="CRO"
               keyboardType="numeric"
               placeholderTextColor="#747474"
-              onChangeText={(cro)=>{setCro(cro)}}
+              onChangeText={(cro) => {
+                setCro(cro);
+              }}
             />
           </View>
           <View style={styles.boxInput}>
@@ -92,7 +98,7 @@ const CadDent = ({ navigation }) => {
               placeholder="Email"
               keyboardType="email-address"
               placeholderTextColor="#747474"
-              autoCapitalize='none'
+              autoCapitalize="none"
               onChangeText={(email) => {
                 setEmail(email);
               }}
@@ -100,9 +106,13 @@ const CadDent = ({ navigation }) => {
           </View>
           <View style={styles.boxInput}>
             <Text style={{ color: "#79BD9A" }}>Senha:</Text>
-            <TextInput style={styles.input} secureTextEntry  onChangeText={(senha) => {
+            <TextInput
+              style={styles.input}
+              secureTextEntry
+              onChangeText={(senha) => {
                 setSenha(senha);
-              }}/>
+              }}
+            />
           </View>
           <View style={styles.botoesLogin}>
             <View style={styles.social}></View>
@@ -112,10 +122,10 @@ const CadDent = ({ navigation }) => {
           <View style={styles.textCad}></View>
           <View style={styles.contBtn}>
             <TouchableOpacity
-              style={{ flexDirection: "row",}}
+              style={{ flexDirection: "row" }}
               onPress={() => navigation.navigate("login")}
             >
-              <Text style={{ color: "#747474", fontSize: 18,}}>
+              <Text style={{ color: "#747474", fontSize: 18 }}>
                 Já é cadastrado?
               </Text>
               <Text
@@ -125,7 +135,12 @@ const CadDent = ({ navigation }) => {
                 Login
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btnDentista} onPress={()=>{cadastro()}}>
+            <TouchableOpacity
+              style={styles.btnDentista}
+              onPress={() => {
+                cadastro();
+              }}
+            >
               <Text style={{ fontSize: 24, color: "#fff" }}>Cadastrar</Text>
             </TouchableOpacity>
           </View>

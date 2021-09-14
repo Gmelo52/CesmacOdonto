@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text } from "react-native";
 import LottieView from "lottie-react-native";
 import segonha from "../../assets/segonha2.json";
+import AnimatedEllipsis from 'react-native-animated-ellipsis';
+
 
 export default function LoadSeg() {
   return (
@@ -22,6 +24,7 @@ export default function LoadSeg() {
           autoPlay
           loop
         />
+        <AnimatedEllipsis/>
       </View>
     </View>
   );
