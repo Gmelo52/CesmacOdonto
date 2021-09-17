@@ -15,7 +15,7 @@ export default function Analge() {
         só, quando o processo doloroso já está instalado, a principal conduta é
         remover a causa.{"\n"}
         {"\n"}
-        PARACETAMOL – (ex.: TYLENOL®) CATEGORIA B{"\n"}
+        <Text style={{fontWeight:'bold'}}>PARACETAMOL – (ex.: TYLENOL®) CATEGORIA B</Text>{"\n"}
         {"\n"}- Apresentação: Comprimidos revestidos 500mg e 750mg.{"\n"}-
         Posologia: Um comprimido de 500mg de 4 em 4 horas, ou de 6 em 6 horas.
         OU Um comprimido de 750 mg de 6 em 6 horas.{"\n"}

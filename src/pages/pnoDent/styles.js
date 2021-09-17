@@ -14,17 +14,18 @@ const styles = StyleSheet.create({
         alignItems: "flex-end"
     },
     contTextTitle:{
+        flex: 1,
         flexDirection:"column",
     },
     title:{
         color: "#fff",
         fontWeight:"bold",
-        fontSize:30,
+        fontSize:24,
         marginLeft:30,
     },
     descTitle:{
         color: "#fff",
-        fontSize:12,
+        fontSize:10,
         marginBottom: 35,
         marginLeft:30,
     },

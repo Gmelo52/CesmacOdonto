@@ -62,7 +62,7 @@ const HomeGest = ({ navigation }) => {
       </View>
       <View style={styles.boxBtn}>
         <View style={styles.viewBoasVindas}>
-          <Text style={styles.text}> Seja bem vinda, {nome}.</Text>
+          <Text style={styles.text}> Seja bem-vinda, {nome}.</Text>
         </View>
         <View style={styles.viewBtns}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>

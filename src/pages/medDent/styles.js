@@ -16,26 +16,27 @@ const styles = StyleSheet.create({
         alignItems: "flex-end"
     },
     contTextTitle:{
+        flex: 1,
         flexDirection:"column",
     },
     title:{
         color: "#fff",
         fontWeight:"bold",
-        fontSize:30,
+        fontSize:24,
         marginLeft:30,
     },
     descTitle:{
         color: "#fff",
-        fontSize:12,
+        fontSize:10,
         marginBottom: 35,
         marginLeft:30,
     },
     icon:{
-        width: 80,
-        height: 80,
+        width: 70,
+        height: 70,
         alignSelf:'center',
-        right: 30,
-        top:10
+        top:10,
+        margin:20,
       },
     contDesc:{
         marginTop:-25,

@@ -26,7 +26,7 @@ export default function Antimicrobianos() {
         {"\n"}
         Sugestão clínica usual:{"\n"}
         {"\n"}
-        AMOXICILINA - (ex.: AMOXIL®) CATEGORIA B{"\n"}
+        <Text style={{fontWeight:'bold'}}>AMOXICILINA - (ex.: AMOXIL®) CATEGORIA B</Text>{"\n"}
         {"\n"}- Apresentação: cápsulas de 500 mg.{"\n"}- Posologia: uma cápsula
         de 500 mg, três vezes ao dia (de 8 em 8 horas).{"\n"}- Indicação:
         antibiótico de amplo espectro indicado para o tratamento de infecções
@@ -35,7 +35,7 @@ export default function Antimicrobianos() {
         administrada a pacientes com histórico de hipersensibilidade a
         antibióticos betalactâmicos (p. ex. penicilinas e cefalosporinas).{"\n"}
         {"\n"}
-        CLINDAMICINA – (ex.: DALACIN C®) CATEGORIA B{"\n"}
+        <Text style={{fontWeight:'bold'}}>CLINDAMICINA – (ex.: DALACIN C®) CATEGORIA B</Text>{"\n"}
         {"\n"}
         - Apresentação: cápsulas de 300mg.{"\n"}
 - Posologia: uma cápsula de 300mg de 6 em 6 horas ou 8 em 8 horas.{"\n"}

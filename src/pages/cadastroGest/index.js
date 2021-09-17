@@ -26,17 +26,21 @@ const CadGest = ({ navigation }) => {
 
   async function cadastro() {
     setload(true);
-    try {
-      let usuarioCad = await firebase
-        .auth()
-        .createUserWithEmailAndPassword(email, senha);
-      await db.collection("usuarios").doc(usuarioCad.user.uid).set({
-        nome: nome,
-        email: email,
-        tipo: "gest",
-      });
-    } catch (erro) {
-      setmsg("Verifique os campos digitados");
+    if (nome == '') {
+      setmsg('Preencha os campos')
+    }else{
+      try {
+        let usuarioCad = await firebase
+          .auth()
+          .createUserWithEmailAndPassword(email, senha);
+        await db.collection("usuarios").doc(usuarioCad.user.uid).set({
+          nome: nome,
+          email: email,
+          tipo: "gest",
+        });
+      } catch (erro) {
+        setmsg("Verifique os campos digitados");
+      }
     }
     setload(false);
   }
@@ -58,7 +62,8 @@ const CadGest = ({ navigation }) => {
               fontSize: 36,
               fontWeight: "bold",
               color: "#0B486B",
-              marginLeft: 20,
+              textAlign:'right',
+              marginHorizontal: 20,
             }}
           >
             Gestante

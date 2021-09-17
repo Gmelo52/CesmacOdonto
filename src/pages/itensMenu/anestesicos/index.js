@@ -21,8 +21,8 @@ export default function Anest() {
         ocitocina, em doses bem elevadas, poderia agir sobre a musculatura lisa
         uterina e causar contrações.{"\n"}
         {"\n"}
-        Sugestão clínica:{"\n"}CLORIDRATO DE LIDOCAÍNA + EPINEFRINA (ex.:
-        ALPHACAÍNE®) CATEGORIA B{"\n"}
+        Sugestão clínica:{"\n"}<Text style={{fontWeight:'bold'}}>CLORIDRATO DE LIDOCAÍNA + EPINEFRINA (ex.:
+        ALPHACAÍNE®) CATEGORIA B </Text>{"\n"}
         {"\n"}
         Apresentação: Solução estéril injetável de Cloridrato de lidocaína 2%
         (20mg/mL) + Epinefrina 1:100.000 acondicionada em tubetes de vidro de

@@ -14,7 +14,7 @@ export default function Antifungicos() {
         {"\n"}
         Sugestão clínica usual:{"\n"}
         {"\n"}
-        MICONAZOL (ex.: DAKTARIN® gel oral) CATEGORIA C{"\n"}
+        <Text style={{fontWeight:'bold'}}>MICONAZOL (ex.: DAKTARIN® gel oral) CATEGORIA C</Text>{"\n"}
         {"\n"}
         - Apresentação: Gel de 20 mg/g de miconazol em bisnaga com 40 g.
 - Posologia: A aplicação pode ser feita com o auxílio de uma haste flexível recoberta com algodão

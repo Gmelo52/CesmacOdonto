@@ -14,7 +14,7 @@ export default function Sedacao() {
         Sugestão clínica: Casos em que a gestante precise de sedação, o
         cirurgião-dentista pode explorar o efeito colateral de sonolência dos
         anti-histamínicos de primeira geração como o dimenidrato.{"\n"}
-        {"\n"}DIMENIDRATO - (ex.: DRAMIN®)
+        {"\n"}<Text style={{fontWeight:'bold'}}>DIMENIDRATO - (ex.: DRAMIN®)</Text>
         {"\n"}CATEGORIA B{"\n"}- Apresentação: comprimido de 100mg.{"\n"} 
         - Posologia:{"\n"}
         Paciente pouco ansiosa: um comprimido de 100 mg 1 hora antes do

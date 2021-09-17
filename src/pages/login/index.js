@@ -73,7 +73,8 @@ const Login = ({ navigation }) => {
               fontSize: 36,
               fontWeight: "bold",
               color: "#0B486B",
-              marginLeft: 20,
+              textAlign:'right',
+              marginHorizontal: 20,
             }}
           >
             Login

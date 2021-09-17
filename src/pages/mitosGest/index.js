@@ -12,7 +12,7 @@ export default function MitosGest() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Text>
         </View>
-        <Image source={require("../../assets/icon5.png")} style={styles.icon} />
+        <Image source={require("../../assets/icon5.png")} style={styles.icon} /> 
       </View>
       <View style={styles.contDesc}>
         <View style={styles.viewText}>

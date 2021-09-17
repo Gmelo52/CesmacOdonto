@@ -64,7 +64,7 @@ const HomeDent = ({ navigation }) => {
       </View>
       <View style={styles.boxBtn}>
         <View style={styles.viewBoasVindas}>
-          <Text style={styles.text}> Seja bem vindo(a), {nome}.</Text>
+          <Text style={styles.text}> Seja bem-vinda, {nome}.</Text>
         </View>
         <View style={styles.viewBtns}>
           <View style={styles.viewLinha}>
@@ -126,7 +126,7 @@ const HomeDent = ({ navigation }) => {
                 </ImageBackground>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate("altGest")}>
+            <TouchableOpacity onPress={() => navigation.navigate("prontuario")}>
               <View style={styles.btn}>
                 <ImageBackground
                   source={require("../../assets/bgBtn2.png")}
@@ -153,7 +153,7 @@ const HomeDent = ({ navigation }) => {
             >
               <View style={styles.viewVideo}>
                 <View style={{ alignContent: "center" }}>
-                  <Text style={styles.titleBtn}>Como escovar</Text>
+                  <Text style={styles.titleBtn}>Como acessar o bulário anvisa</Text>
                   <Text style={styles.descBtn}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Text>

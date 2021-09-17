@@ -22,7 +22,7 @@ const VideoDent = () => {
       </View>
       <View style={styles.contDesc}>
         <View style={styles.viewText}>
-          <Text style={styles.textTitle}>Como seria a escova ideal?</Text>
+          <Text style={styles.textTitle}>Como acessar o bulário eletrônico da anvisa?</Text>
           <Text style={styles.textDesc}>
             Existem vários tipos de escovas dentais no mercado, desenvolvidas
             pelos fabricantes. A escolha da escova é uma etapa muito importante
@@ -45,5 +45,3 @@ const VideoDent = () => {
   );
 };
 export default VideoDent;
-
-<iframe width="1904" height="832" src="https://www.youtube.com/embed/AofOpJsghfc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

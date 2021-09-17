@@ -23,7 +23,7 @@ export default function Anti_inflamatorios() {
         onde o risco do uso do medicamento a gestante e ao feto vale o seu
         benefício.{"\n"}
         {"\n"}
-        PREDNISONA – (ex.: METICORTEN®) CATEGORIA B{"\n"}
+        <Text style={{fontWeight:'bold'}}>PREDNISONA – (ex.: METICORTEN®) CATEGORIA B</Text>{"\n"}
         {"\n"}- Apresentação: Comprimidos de 5 mg.{"\n"}- Posologia: um
         comprimido de 5mg a cada 6 horas.{"\n"}- Indicação: proporciona potente
         efeito anti-inflamatório, antirreumático e antialérgico no tratamento de

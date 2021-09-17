@@ -8,7 +8,7 @@ export default function Antivirais() {
     <View>
       <Text style={styles.textTitle}>Antivirais</Text>
       <Text style={styles.textDesc}>
-        ACICLOVIR – (ex.: ZOVIRAX®) CATEGORIA B{"\n"}
+      <Text style={{fontWeight:'bold'}}>ACICLOVIR – (ex.: ZOVIRAX®) CATEGORIA B</Text>{"\n"}
         {"\n"}- Apresentação: Zovirax® creme contém 50 mg/g de aciclovir e é
         apresentado em bisnagas contendo 10 g.{"\n"}- Posologia: uso tópico, com
         aplicação de 5x ao dia no local da lesão, omitindo o uso noturno. -

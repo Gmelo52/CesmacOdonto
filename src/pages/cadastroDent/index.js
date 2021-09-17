@@ -14,6 +14,7 @@ import styles from "./styles";
 import firebase from "../../config/firebase";
 import "firebase/firestore";
 import LoadSeg from "../../components/loadSeg";
+import ModalSelector from 'react-native-modal-selector'
 
 const CadDent = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -22,24 +23,65 @@ const CadDent = ({ navigation }) => {
   const [cro, setCro] = useState("");
   const [msg, setmsg] = useState("");
   const [load, setload] = useState(false);
+  const [uf, setuf] = useState('AL')
+
   const db = firebase.firestore();
+  let index = 0;
+  const data = [
+    { key: 'AC', label: 'AC'},
+    { key: 'AL', label: 'AL'},
+    { key: 'AP', label: 'AP'},
+    { key: 'AM', label: 'AM'},
+    { key: 'BA', label: 'BA'},
+    { key: 'CE', label: 'CE'},
+    { key: 'DF', label: 'DF'},
+    { key: 'ES', label: 'ES'},
+    { key: 'GO', label: 'GO'},
+    { key: 'MA', label: 'MA'},
+    { key: 'MT', label: 'MT'},
+    { key: 'MS', label: 'MS'},
+    { key: 'MG', label: 'MG'},
+    { key: 'PA', label: 'PA'},
+    { key: 'PB', label: 'PB'},
+    { key: 'PR', label: 'PR'},
+    { key: 'PE', label: 'PE'},
+    { key: 'PI', label: 'PI'},
+    { key: 'RJ', label: 'RJ'},
+    { key: 'RN', label: 'RN'},
+    { key: 'RS', label: 'RS'},
+    { key: 'RO', label: 'RO'},
+    { key: 'RR', label: 'RR'},
+    { key: 'SC', label: 'SC'},
+    { key: 'SP', label: 'SP'},
+    { key: 'SE', label: 'SE'},
+    { key: 'TO', label: 'TO'},
+];
 
   async function cadastro() {
-    setload(true)
-    try {
-      let usuarioCad = await firebase
-        .auth()
-        .createUserWithEmailAndPassword(email, senha);
-      await db.collection("usuarios").doc(usuarioCad.user.uid).set({
-        nome: nome,
-        email: email,
-        cro: cro,
-        tipo: "dent",
-      });
-    } catch (erro) {
-      setmsg("Verifique os campos digitados");
+
+
+
+    setload(true);
+    if (nome == "" || cro == ""|| uf == "") {
+      setmsg("Preencha os campos");
+    } else {
+      try {
+        let usuarioCad = await firebase
+          .auth()
+          .createUserWithEmailAndPassword(email, senha);
+        await db.collection("usuarios").doc(usuarioCad.user.uid).set({
+          nome: nome,
+          email: email,
+          cro: cro,
+          uf: uf,
+          tipo: "dent",
+        });
+      } catch (erro) {
+        setmsg("Verifique os campos digitados");
+        console.log(erro);
+      }
     }
-    setload(false)
+    setload(false);
   }
   return load == true ? (
     <LoadSeg />
@@ -58,7 +100,8 @@ const CadDent = ({ navigation }) => {
               fontSize: 36,
               fontWeight: "bold",
               color: "#79BD9A",
-              marginLeft: 20,
+              textAlign:'right',
+              marginHorizontal: 20,
             }}
           >
             Profissional
@@ -79,17 +122,38 @@ const CadDent = ({ navigation }) => {
               }}
             />
           </View>
-          <View style={styles.boxInput}>
-            <Text style={{ color: "#79BD9A" }}>Número CRO:</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="CRO"
-              keyboardType="numeric"
-              placeholderTextColor="#747474"
-              onChangeText={(cro) => {
-                setCro(cro);
-              }}
-            />
+          <View style={styles.boxInputCro}>
+            <View style={styles.cro}>
+              <Text style={{ color: "#79BD9A" }}>Número CRO:</Text>
+              <TextInput
+                style={styles.inputCro}
+                placeholder="CRO"
+                keyboardType="numeric"
+                placeholderTextColor="#747474"
+                onChangeText={(cro) => {
+                  setCro(cro);
+                }}
+              />
+            </View>
+            <View style={styles.uf}>
+            <ModalSelector
+                    data={data}
+                    accessible={true}
+                    cancelText={'Cancelar'}
+                    onChange={(option)=>{setuf(option.label)}}
+                    selectedKey={uf}
+                    selectStyle={{borderWidth: 0}}
+                    optionContainerStyle={{height:400, width:100, alignSelf:'center'}}
+                    optionTextStyle={{color:'#79BD9A'}}
+                    overlayStyle={{backgroundColor:'rgba(121,189,154,0.3)'}}
+                    backdropPressToClose={true}
+                    animationType={'none'}
+                    cancelContainerStyle={{display:'none'}}
+                    >
+                  
+
+                </ModalSelector>
+            </View>
           </View>
           <View style={styles.boxInput}>
             <Text style={{ color: "#79BD9A" }}>Email:</Text>

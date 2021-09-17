@@ -19,13 +19,15 @@ import HomeDent from "./src/pages/homeDent";
 import PnoDent from "./src/pages/pnoDent";
 import AtenDent from "./src/pages/atenDent";
 import MedDent from "./src/pages/medDent"
+import Splash from "./src/pages/splash";
+import Prontuario from './src/pages/prontuario'
 
 const Stack = createStackNavigator();
 
 export default function App({ navigation }) {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="login">
+      <Stack.Navigator initialRouteName="splash">
         <Stack.Screen
           name="login"
           component={Login}
@@ -104,6 +106,16 @@ export default function App({ navigation }) {
         <Stack.Screen
           name="medDent"
           component={MedDent}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="splash"
+          component={Splash}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="prontuario"
+          component={Prontuario}
           options={{ headerShown: false }}
         />
 
