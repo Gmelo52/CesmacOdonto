@@ -13,8 +13,6 @@ import MitosGest from "./src/pages/mitosGest"
 import MedGest from "./src/pages/medGest"
 import PnoGest from "./src/pages/pnoGest"
 import AltGest from "./src/pages/altGest"
-import Inicio from "./src/pages/inicio"
-import LoginDent from "./src/pages/loginDent";
 import HomeDent from "./src/pages/homeDent";
 import PnoDent from "./src/pages/pnoDent";
 import AtenDent from "./src/pages/atenDent";
@@ -32,11 +30,6 @@ export default function App({ navigation }) {
           name="login"
           component={Login}
           options={{ headerShown: false}}
-        />
-        <Stack.Screen
-          name="loginDent"
-          component={LoginDent}
-          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="cadGest"
@@ -86,11 +79,6 @@ export default function App({ navigation }) {
         <Stack.Screen
           name="altGest"
           component={AltGest}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="inicio"
-          component={Inicio}
           options={{ headerShown: false }}
         />
         <Stack.Screen
