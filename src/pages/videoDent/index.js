@@ -1,6 +1,6 @@
 //import liraries
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ScrollView } from "react-native";
 import styles from "./styles";
 import { WebView } from "react-native-webview";
 
@@ -23,6 +23,7 @@ const VideoDent = () => {
       <View style={styles.contDesc}>
         <View style={styles.viewText}>
           <Text style={styles.textTitle}>Como acessar o bulário eletrônico da anvisa?</Text>
+          <ScrollView>
           <Text style={styles.textDesc}>
             Existem vários tipos de escovas dentais no mercado, desenvolvidas
             pelos fabricantes. A escolha da escova é uma etapa muito importante
@@ -39,6 +40,7 @@ const VideoDent = () => {
             realizada a cada 3 meses, após algum resfriado ou quando as cerdas
             estiverem deformadas.
           </Text>
+          </ScrollView>
         </View>
       </View>
     </View>

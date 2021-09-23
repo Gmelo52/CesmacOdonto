@@ -64,7 +64,7 @@ const HomeDent = ({ navigation }) => {
       </View>
       <View style={styles.boxBtn}>
         <View style={styles.viewBoasVindas}>
-          <Text style={styles.text}> Seja bem-vinda, {nome}.</Text>
+          <Text allowFontScaling={false} style={styles.text}> Seja bem-vinda, {nome}.</Text>
         </View>
         <View style={styles.viewBtns}>
           <View style={styles.viewLinha}>
@@ -80,8 +80,8 @@ const HomeDent = ({ navigation }) => {
                     style={styles.icon}
                   />
                   <View style={styles.viewTextBtn}>
-                    <Text style={styles.titleBtn}>Importancia PNO</Text>
-                    <Text style={styles.descBtn}>
+                    <Text allowFontScaling={false} style={styles.titleBtn}>Importancia PNO</Text>
+                    <Text allowFontScaling={false} style={styles.descBtn}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </Text>
                   </View>
@@ -99,8 +99,8 @@ const HomeDent = ({ navigation }) => {
                     source={require("../../assets/icon4.png")}
                     style={styles.icon}
                   />
-                  <Text style={styles.titleBtn}>Medicamentos</Text>
-                  <Text style={styles.descBtn}>
+                  <Text allowFontScaling={false} style={styles.titleBtn}>Medicamentos</Text>
+                  <Text allowFontScaling={false} style={styles.descBtn}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Text>
                 </ImageBackground>
@@ -119,8 +119,8 @@ const HomeDent = ({ navigation }) => {
                     source={require("../../assets/icon7.png")}
                     style={styles.icon}
                   />
-                  <Text style={styles.titleBtn}>Atendimento</Text>
-                  <Text style={styles.descBtn}>
+                  <Text allowFontScaling={false} style={styles.titleBtn}>Atendimento</Text>
+                  <Text allowFontScaling={false} style={styles.descBtn}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Text>
                 </ImageBackground>
@@ -137,8 +137,8 @@ const HomeDent = ({ navigation }) => {
                     source={require("../../assets/icon6.png")}
                     style={styles.icon}
                   />
-                  <Text style={styles.titleBtn}>Prontuário</Text>
-                  <Text style={styles.descBtn}>
+                  <Text allowFontScaling={false} style={styles.titleBtn}>Prontuário</Text>
+                  <Text allowFontScaling={false} style={styles.descBtn}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Text>
                 </ImageBackground>
@@ -153,8 +153,8 @@ const HomeDent = ({ navigation }) => {
             >
               <View style={styles.viewVideo}>
                 <View style={{ alignContent: "center" }}>
-                  <Text style={styles.titleBtn}>Como acessar o bulário anvisa</Text>
-                  <Text style={styles.descBtn}>
+                  <Text allowFontScaling={false} style={styles.titleBtn}>Como acessar o bulário anvisa</Text>
+                  <Text allowFontScaling={false} style={styles.descBtn}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Text>
                 </View>

@@ -30,14 +30,15 @@ export default function MedDent() {
         source={require("../../assets/imgTab.png")}
         style={styles.imgTab}
       />
+      <Text>{"\n"}{"\n"}{"\n"}</Text>
     </View>
   );
   return (
     <View style={styles.container}>
       <View style={styles.contHeader}>
         <View style={styles.contTextTitle}>
-          <Text style={styles.title}>Medicamentos</Text>
-          <Text style={styles.descTitle}>
+          <Text allowFontScaling={false} style={styles.title}>Medicamentos</Text>
+          <Text allowFontScaling={false} style={styles.descTitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Text>
         </View>
@@ -49,37 +50,37 @@ export default function MedDent() {
             <ScrollView showsHorizontalScrollIndicator={false} horizontal>
               <TouchableOpacity style={styles.itemMenu} onPress={()=>{setCont(<Sedacao/>)}}>
                 <View>
-                  <Text style={styles.textMenu}>Sedação</Text>
+                  <Text allowFontScaling={false} style={styles.textMenu}>Sedação</Text>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity style={styles.itemMenu} onPress={()=>{setCont(<Anest/>)}}>
                 <View>
-                  <Text style={styles.textMenu}>Anestésicos Locais</Text>
+                  <Text allowFontScaling={false} style={styles.textMenu}>Anestésicos Locais</Text>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity style={styles.itemMenu} onPress={()=>{setCont(<Analge/>)}}>
                 <View>
-                  <Text style={styles.textMenu}>Analgésicos</Text>
+                  <Text allowFontScaling={false} style={styles.textMenu}>Analgésicos</Text>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity style={styles.itemMenu} onPress={()=>{setCont(<Anti_inflamatorios/>)}}>
                 <View>
-                  <Text style={styles.textMenu}>Anti-inflamatórios</Text>
+                  <Text allowFontScaling={false} style={styles.textMenu}>Anti-inflamatórios</Text>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity style={styles.itemMenu} onPress={()=>{setCont(<Antimicrobianos/>)}}>
                 <View>
-                  <Text style={styles.textMenu}>Antimicrobianos</Text>
+                  <Text allowFontScaling={false} style={styles.textMenu}>Antimicrobianos</Text>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity style={styles.itemMenu} onPress={()=>{setCont(<Antifungicos/>)}}>
                 <View>
-                  <Text style={styles.textMenu}>Antifungicos</Text>
+                  <Text allowFontScaling={false} style={styles.textMenu}>Antifungicos</Text>
                 </View>
               </TouchableOpacity>
               <TouchableOpacity style={styles.itemMenu} onPress={()=>{setCont(<Antivirais/>)}}>
                 <View>
-                  <Text style={styles.textMenu}>Antivirais</Text>
+                  <Text allowFontScaling={false} style={styles.textMenu}>Antivirais</Text>
                 </View>
               </TouchableOpacity>
             </ScrollView>

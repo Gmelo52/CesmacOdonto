@@ -7,8 +7,8 @@ export default function AltGest() {
     <View style={styles.container}>
       <View style={styles.contHeader}>
         <View style={styles.contTextTitle}>
-          <Text style={styles.title}>Alterações fisiológicas</Text> 
-          <Text style={styles.descTitle}>
+          <Text allowFontScaling={false} style={styles.title}>Alterações fisiológicas</Text> 
+          <Text allowFontScaling={false} style={styles.descTitle}>
             Alterações fisiológicas da gestação
           </Text>
         </View>

@@ -57,7 +57,7 @@ const CadGest = ({ navigation }) => {
       >
         <View style={styles.boxLogo}></View>
         <View style={styles.boxLogin}>
-          <Text
+          <Text allowFontScaling={false} 
             style={{
               fontSize: 36,
               fontWeight: "bold",
@@ -118,10 +118,10 @@ const CadGest = ({ navigation }) => {
               style={{ flexDirection: "row" }}
               onPress={() => navigation.navigate("login")}
             >
-              <Text style={{ color: "#000", fontSize: 18 }}>
+              <Text allowFontScaling={false} style={{ color: "#000", fontSize: 16 }}>
                 Já é cadastrado?
               </Text>
-              <Text style={{ color: "#000", fontWeight: "bold", fontSize: 18 }}>
+              <Text allowFontScaling={false} style={{ color: "#000", fontWeight: "bold", fontSize: 16 }}>
                 {" "}
                 Login
               </Text>
@@ -132,7 +132,7 @@ const CadGest = ({ navigation }) => {
                 cadastro();
               }}
             >
-              <Text style={{ fontSize: 24, color: "#fff" }}>Cadastrar</Text>
+              <Text allowFontScaling={false} style={{ fontSize: 24, color: "#fff" }}>Cadastrar</Text>
             </TouchableOpacity>
           </View>
         </View>

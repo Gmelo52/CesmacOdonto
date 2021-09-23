@@ -68,7 +68,7 @@ const Login = ({ navigation }) => {
         style={styles.background}
       >
         <View style={styles.boxLogin}>
-          <Text
+          <Text allowFontScaling={false} 
             style={{
               fontSize: 36,
               fontWeight: "bold",
@@ -130,7 +130,7 @@ const Login = ({ navigation }) => {
               style={styles.btnLogin}
               onPress={() => loginFirebase()}
             >
-              <Text style={{ fontSize: 24, color: "#0B486B" }}>Login</Text>
+              <Text allowFontScaling={false} style={{ fontSize: 24, color: "#0B486B" }}>Login</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -138,10 +138,10 @@ const Login = ({ navigation }) => {
           <View style={styles.textCad}>
             <TouchableOpacity onPress={() => navigation.navigate("cadGest")}>
               <View style={{ flexDirection: "row" }}>
-                <Text style={{ color: "#747474", fontSize: 18 }}>
+                <Text allowFontScaling={false} style={{ color: "#747474", fontSize: 18 }}>
                   Cadastre-se como
                 </Text>
-                <Text
+                <Text allowFontScaling={false} 
                   style={{ color: "#747474", fontWeight: "bold", fontSize: 18 }}
                 >
                   {" "}
@@ -151,10 +151,10 @@ const Login = ({ navigation }) => {
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate("cadDent")}>
               <View style={{ flexDirection: "row" }}>
-                <Text style={{ color: "#747474", fontSize: 18 }}>
+                <Text allowFontScaling={false} style={{ color: "#747474", fontSize: 18 }}>
                   Cadastre-se como
                 </Text>
-                <Text
+                <Text allowFontScaling={false} 
                   style={{ color: "#747474", fontWeight: "bold", fontSize: 18 }}
                 >
                   {" "}

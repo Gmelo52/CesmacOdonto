@@ -7,8 +7,8 @@ export default function MedGest() {
     <View style={styles.container}>
       <View style={styles.contHeader}>
         <View style={styles.contTextTitle}>
-          <Text style={styles.title}>Medicamentos</Text>
-          <Text style={styles.descTitle}>
+          <Text allowFontScaling={false} style={styles.title}>Medicamentos</Text>
+          <Text allowFontScaling={false} style={styles.descTitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Text>
         </View>

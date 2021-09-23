@@ -7,8 +7,8 @@ export default function MitosGest() {
     <View style={styles.container}>
       <View style={styles.contHeader}>
         <View style={styles.contTextTitle}>
-          <Text style={styles.title}>Mitos e Verdades</Text>
-          <Text style={styles.descTitle}>
+          <Text allowFontScaling={false} style={styles.title}>Mitos e Verdades</Text>
+          <Text allowFontScaling={false} style={styles.descTitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Text>
         </View>
