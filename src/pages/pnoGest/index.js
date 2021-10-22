@@ -9,7 +9,6 @@ export default function PnoGest() {
         <View style={styles.contTextTitle}>
           <Text allowFontScaling={false} style={styles.title}>Importancia do PNO</Text>
           <Text allowFontScaling={false} style={styles.descTitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Text>
         </View>
         <Image source={require("../../assets/icon1.png")} style={styles.icon} />

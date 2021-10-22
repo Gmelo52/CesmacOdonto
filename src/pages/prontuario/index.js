@@ -10,7 +10,7 @@ export default function Prontuario() {
         <View style={styles.contTextTitle}>
           <Text allowFontScaling={false} style={styles.title}>Prontuário</Text>
           <Text allowFontScaling={false} style={styles.descTitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           
           </Text>
         </View>
         <Image source={require("../../assets/icon6.png")} style={styles.icon} />

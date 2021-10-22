@@ -78,9 +78,7 @@ const HomeGest = ({ navigation }) => {
                     style={styles.icon}
                   />
                   <Text allowFontScaling={false} style={styles.titleBtn}>Mitos e Verdades</Text>
-                  <Text allowFontScaling={false} style={styles.descBtn}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Text>
+
                 </ImageBackground>
               </View>
             </TouchableOpacity>
@@ -96,9 +94,6 @@ const HomeGest = ({ navigation }) => {
                     style={styles.icon}
                   />
                   <Text allowFontScaling={false} style={styles.titleBtn}>Medicamentos</Text>
-                  <Text allowFontScaling={false} style={styles.descBtn}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Text>
                 </ImageBackground>
               </View>
             </TouchableOpacity>
@@ -114,9 +109,6 @@ const HomeGest = ({ navigation }) => {
                     style={styles.icon}
                   />
                   <Text allowFontScaling={false} style={styles.titleBtn}>Importancia PNO</Text>
-                  <Text allowFontScaling={false} style={styles.descBtn}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Text>
                 </ImageBackground>
               </View>
             </TouchableOpacity>
@@ -132,9 +124,6 @@ const HomeGest = ({ navigation }) => {
                     style={styles.icon}
                   />
                   <Text allowFontScaling={false} style={styles.titleBtn}>Alterações</Text>
-                  <Text allowFontScaling={false} style={styles.descBtn}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Text>
                 </ImageBackground>
               </View>
             </TouchableOpacity>
@@ -152,14 +141,11 @@ const HomeGest = ({ navigation }) => {
             <View style={styles.viewBtnVideo}>
               <View style={{ alignContent: "center" }}>
                 <Text allowFontScaling={false} style={styles.titleBtn}>Como escovar</Text>
-                <Text allowFontScaling={false} style={styles.descBtn}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </Text>
               </View>
               <TouchableOpacity onPress={() => navigation.navigate("video")}>
                 <Image
                   source={require("../../assets/play.png")}
-                  style={{ width: 40, height: 40, marginHorizontal: 15 }}
+                  style={{ width: 40, height: 40, marginRight: 15 }}
                 />
               </TouchableOpacity>
             </View>

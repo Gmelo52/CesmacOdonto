@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   viewVideo: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: 'space-around',
     alignItems: "center",
     width: '100%',
     height: '100%',

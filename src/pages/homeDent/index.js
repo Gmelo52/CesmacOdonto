@@ -81,9 +81,6 @@ const HomeDent = ({ navigation }) => {
                   />
                   <View style={styles.viewTextBtn}>
                     <Text allowFontScaling={false} style={styles.titleBtn}>Importancia PNO</Text>
-                    <Text allowFontScaling={false} style={styles.descBtn}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </Text>
                   </View>
                 </ImageBackground>
               </View>
@@ -100,9 +97,7 @@ const HomeDent = ({ navigation }) => {
                     style={styles.icon}
                   />
                   <Text allowFontScaling={false} style={styles.titleBtn}>Medicamentos</Text>
-                  <Text allowFontScaling={false} style={styles.descBtn}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Text>
+           
                 </ImageBackground>
               </View>
             </TouchableOpacity>
@@ -120,9 +115,7 @@ const HomeDent = ({ navigation }) => {
                     style={styles.icon}
                   />
                   <Text allowFontScaling={false} style={styles.titleBtn}>Atendimento</Text>
-                  <Text allowFontScaling={false} style={styles.descBtn}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Text>
+
                 </ImageBackground>
               </View>
             </TouchableOpacity>
@@ -138,9 +131,7 @@ const HomeDent = ({ navigation }) => {
                     style={styles.icon}
                   />
                   <Text allowFontScaling={false} style={styles.titleBtn}>Prontuário</Text>
-                  <Text allowFontScaling={false} style={styles.descBtn}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Text>
+
                 </ImageBackground>
               </View>
             </TouchableOpacity>
@@ -154,16 +145,14 @@ const HomeDent = ({ navigation }) => {
               <View style={styles.viewVideo}>
                 <View style={{ alignContent: "center" }}>
                   <Text allowFontScaling={false} style={styles.titleBtn}>Como acessar o bulário anvisa</Text>
-                  <Text allowFontScaling={false} style={styles.descBtn}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Text>
+  
                 </View>
                 <TouchableOpacity
                   onPress={() => navigation.navigate("videoDent")}
                 >
                   <Image
                     source={require("../../assets/play2.png")}
-                    style={{ width: 40, height: 40, marginHorizontal: 15 }}
+                    style={{ width: 40, height: 40, marginRight: 15 }}
                   />
                 </TouchableOpacity>
               </View>

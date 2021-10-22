@@ -39,7 +39,7 @@ export default function MedDent() {
         <View style={styles.contTextTitle}>
           <Text allowFontScaling={false} style={styles.title}>Medicamentos</Text>
           <Text allowFontScaling={false} style={styles.descTitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           
           </Text>
         </View>
         <Image source={require("../../assets/icon4.png")} style={styles.icon} />

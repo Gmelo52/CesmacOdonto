@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     itemMenu:{
         backgroundColor: '#fff',
         borderRadius: 30,
-        width: largura / 3,
+        paddingHorizontal:10,
         height: '70%',
         alignSelf: 'center',
         justifyContent: 'center',

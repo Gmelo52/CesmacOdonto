@@ -9,7 +9,7 @@ export default function AtenDent() {
         <View style={styles.contTextTitle}>
           <Text allowFontScaling={false} style={styles.title}>Atend. Odontológico</Text>
           <Text allowFontScaling={false} style={styles.descTitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           
           </Text>
         </View>
         <Image source={require("../../assets/icon7.png")} style={styles.icon} />
@@ -80,15 +80,6 @@ export default function AtenDent() {
               reforçar os dentinhos do bebê não tem nenhuma base científica.
               Portanto, a perda dentária durante a gestação não está relacionado
               ao fato da mulher estar grávida.
-            </Text>
-            <Text style={styles.textTitle}>
-              O consumo de álcool e drogas durante a gestação faz mal?
-            </Text>
-            <Text style={styles.textDesc}>
-              Tanto o fumo quanto o álcool são responsáveis por diversas
-              deficiências que podem acontecer com o feto durante a gestação ou
-              mesmo após o nascimento. As gestantes que são fumantes passivas
-              também expõem o feto a riscos.
             </Text>
             <Text style={styles.textTitle}>
               O consumo de álcool e drogas durante a gestação faz mal?

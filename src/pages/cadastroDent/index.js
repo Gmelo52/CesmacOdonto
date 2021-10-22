@@ -97,7 +97,7 @@ const CadDent = ({ navigation }) => {
             style={{
               fontSize: 36,
               fontWeight: "bold",
-              color: "#79BD9A",
+              color: "#747474",
               textAlign: "right",
               marginHorizontal: 20,
             }}

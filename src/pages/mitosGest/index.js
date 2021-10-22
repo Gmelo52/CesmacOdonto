@@ -9,7 +9,6 @@ export default function MitosGest() {
         <View style={styles.contTextTitle}>
           <Text allowFontScaling={false} style={styles.title}>Mitos e Verdades</Text>
           <Text allowFontScaling={false} style={styles.descTitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Text>
         </View>
         <Image source={require("../../assets/icon5.png")} style={styles.icon} /> 

@@ -9,7 +9,6 @@ export default function AltGest() {
         <View style={styles.contTextTitle}>
           <Text allowFontScaling={false} style={styles.title}>Alterações fisiológicas</Text> 
           <Text allowFontScaling={false} style={styles.descTitle}>
-            Alterações fisiológicas da gestação
           </Text>
         </View>
         <Image source={require("../../assets/icon2.png")} style={styles.icon} />
