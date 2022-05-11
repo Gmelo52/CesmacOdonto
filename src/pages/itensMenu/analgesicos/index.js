@@ -23,7 +23,7 @@ export default function Analge() {
         Não ultrapassar a dose diária total recomendada de 4g.{"\n"}{"\n"}
         - Indicação: analgésico, para dores leves a moderadas, e antitérmico.{"\n"}
         - Contraindicação: não deve ser administrado a pacientes com hipersensibilidade ao paracetamol
-ou a qualquer outro componente de sua fórmula.{"\n"}
+ou a qualquer outro componente de sua fórmula.{"\n"}{"\n"}{"\n"}{"\n"}
 
       </Text>
     </View>

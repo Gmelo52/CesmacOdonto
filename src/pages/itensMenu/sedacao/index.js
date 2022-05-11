@@ -29,7 +29,7 @@ export default function Sedacao() {
         função vestibular e ou vertiginosos, de origem central ou periférica,
         incluindo labirintites{"\n"}{"\n"}- Contraindicação:{"\n"}Hipersensibilidade
         conhecida aos componentes da fórmula.{"\n"}O dimenidrato é
-        contraindicado para pacientes porfíricos.{"\n"}
+        contraindicado para pacientes porfíricos.{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}
       </Text>
     </View>
   );

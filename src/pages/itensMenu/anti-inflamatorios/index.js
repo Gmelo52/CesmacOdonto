@@ -30,7 +30,7 @@ export default function Anti_inflamatorios() {
         doenças que respondem a corticosteroides.{"\n"}- Contraindicação:
         pacientes com infecções sistêmicas por fungos, hipersensibilidade à
         prednisona ou a outros corticosteroides ou a quaisquer componentes de
-        sua fórmula.{"\n"}
+        sua fórmula.{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}
       </Text>
     </View>
   );

@@ -64,7 +64,7 @@ const HomeDent = ({ navigation }) => {
       </View>
       <View style={styles.boxBtn}>
         <View style={styles.viewBoasVindas}>
-          <Text allowFontScaling={false} style={styles.text}> Seja bem-vinda, {nome}.</Text>
+          <Text allowFontScaling={false} style={styles.text}> Seja bem-vindo(a), {nome}.</Text>
         </View>
         <View style={styles.viewBtns}>
           <View style={styles.viewLinha}>
@@ -80,7 +80,7 @@ const HomeDent = ({ navigation }) => {
                     style={styles.icon}
                   />
                   <View style={styles.viewTextBtn}>
-                    <Text allowFontScaling={false} style={styles.titleBtn}>Importancia PNO</Text>
+                    <Text allowFontScaling={false} style={styles.titleBtn}>Importância PNO</Text>
                   </View>
                 </ImageBackground>
               </View>

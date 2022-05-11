@@ -43,7 +43,7 @@ export default function Antimicrobianos() {
 por cepas susceptíveis de bactérias aeróbias Gram-positivas como estreptococos, estafilococos e
 pneumococos.{"\n"}
 - Contraindicação: contraindicado a pacientes que já apresentaram hipersensibilidade à
-clindamicina ou à lincomicina ou a qualquer componente da fórmula.{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}
+clindamicina ou à lincomicina ou a qualquer componente da fórmula.{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}
       </Text>
     </View>
   );

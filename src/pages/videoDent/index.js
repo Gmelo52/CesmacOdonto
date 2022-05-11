@@ -16,7 +16,7 @@ const VideoDent = () => {
           style={{ flex: 1 }}
           javaScriptEnabled={true}
           source={{
-            uri: `https://www.youtube.com/embed/AofOpJsghfc`,
+            uri: `https://www.youtube.com/embed/fPAq5FgQCQc`,
           }}
         />
       </View>

@@ -30,10 +30,9 @@ export default function PnoDent() {
               isso, é de extrema importância que o Cirurgião-Dentista saiba
               reconhecer as peculiaridades da gestação, a fim de evitar os
               possíveis efeitos negativos associados à saúde tanto da gestante
-              quanto do neonato (PRADO et al., 2019). {"\n"}{"\n"}PRADO, Letícia et al.
-              CONDUTA DE CIRURGIÕES-DENTISTAS NO ATENDIMENTO À PACIENTE
-              GESTANTE. Revista Científica da UNIFENAS-ISSN: 2596-3481, v. 1, n.
-              3, 2019.{"\n"}
+              quanto do neonato (PRADO et al., 2019). {"\n"}{"\n"}PRADO, Letícia et al. 
+              Conduta de cirurgiões-dentistas no atendimento à paciente gestante. 
+              Revista Científica da Unifenas, v. 1, n. 3, p. 18-28, 2019.{"\n"}
             </Text>
           </ScrollView>
         </View>

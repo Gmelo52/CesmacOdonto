@@ -37,7 +37,7 @@ export default function Anest() {
         hipersensibilidade aos componentes da fórmula ou que estejam fazendo uso
         de medicamentos que sabidamente provocam alterações na pressão
         sanguínea, como inibidores da monoaminoxidase (IMAO), antidepressivos
-        tricíclicos e fenotiazinas.
+        tricíclicos e fenotiazinas.{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}
       </Text>
     </View>
   );
